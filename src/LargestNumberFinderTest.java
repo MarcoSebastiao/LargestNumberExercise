@@ -1,5 +1,5 @@
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.RepeatedTest;
 
 import java.util.ArrayList;
@@ -8,12 +8,12 @@ import java.util.List;
 
 public class LargestNumberFinderTest {
 
-    private static LargestNumberFinder ln;
-    private static HashMap<String, List> dataSet;
-    private static List<String> keys;
+    private LargestNumberFinder ln;
+    private HashMap<String, List> dataSet;
+    private List<String> keys;
 
-    @BeforeAll
-    public static void init() {
+    @BeforeEach
+    public void init() {
         ln = new LargestNumberFinder();
         dataSet = new HashMap<>();
         dataSet.put("95021", new ArrayList<>(List.of(9, 50, 1, 2)));
